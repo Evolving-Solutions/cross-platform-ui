@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:es_ur_shortener/config/palette.dart';
 
 void main() {
   runApp(const MyApp());
@@ -18,12 +19,12 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         scaffoldBackgroundColor: Colors.white,
         textTheme: GoogleFonts.muliTextTheme(Theme.of(context).textTheme)
-            .apply(bodyColor: Colors.black),
+            .apply(bodyColor: Palette.secondaryGranite),
         pageTransitionsTheme: const PageTransitionsTheme(builders: {
           TargetPlatform.iOS: FadeUpwardsPageTransitionsBuilder(),
           TargetPlatform.android: FadeUpwardsPageTransitionsBuilder()
         }),
-        primaryColor: Colors.blue,
+        primaryColor: Palette.primaryCasal,
       ),
       home: Container(),
     );
