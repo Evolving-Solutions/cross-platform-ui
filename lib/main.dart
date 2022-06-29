@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:es_ur_shortener/config/palette.dart';
+import 'package:es_ur_shortener/layout.dart';
 
 void main() {
   runApp(const MyApp());
@@ -18,7 +19,7 @@ class MyApp extends StatelessWidget {
       title: "Evolving URL Shortener",
       theme: ThemeData(
         scaffoldBackgroundColor: Colors.white,
-        textTheme: GoogleFonts.muliTextTheme(Theme.of(context).textTheme)
+        textTheme: GoogleFonts.mulishTextTheme(Theme.of(context).textTheme)
             .apply(bodyColor: Palette.secondaryGranite),
         pageTransitionsTheme: const PageTransitionsTheme(builders: {
           TargetPlatform.iOS: FadeUpwardsPageTransitionsBuilder(),
@@ -26,7 +27,7 @@ class MyApp extends StatelessWidget {
         }),
         primaryColor: Palette.primaryCasal,
       ),
-      home: Container(),
+      home: const SiteLayout(),
     );
   }
 }
