@@ -27,7 +27,7 @@ class MyApp extends StatelessWidget {
         }),
         primaryColor: Palette.primaryCasal,
       ),
-      home: const SiteLayout(),
+      home: SiteLayout(),
     );
   }
 }
