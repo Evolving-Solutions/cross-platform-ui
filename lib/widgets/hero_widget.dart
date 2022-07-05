@@ -43,17 +43,15 @@ class HeroContainerWidget extends StatelessWidget {
                             weight: FontWeight.w800),
                       ],
                     ),
-                    Container(
+                    SizedBox(
                       width: 500,
                       height: 100,
-                      child: Expanded(
-                        child: CustomText(
-                          text:
-                              'Varius facilisi mauris sed sit. Non sed et duis dui leo, vulputate id malesuada non. Cras aliquet purus dui laoreet diam sed lacus, fames.',
-                          size: 22,
-                          color: Palette.secondaryGranite,
-                          weight: FontWeight.w400,
-                        ),
+                      child: CustomText(
+                        text:
+                            'Varius facilisi mauris sed sit. Non sed et duis dui leo, vulputate id malesuada non. Cras aliquet purus dui laoreet diam sed lacus, fames.',
+                        size: 22,
+                        color: Palette.secondaryGranite,
+                        weight: FontWeight.w400,
                       ),
                     ),
                     const ElevatedButton(onPressed: null, child: Text('Sign up for free'))
