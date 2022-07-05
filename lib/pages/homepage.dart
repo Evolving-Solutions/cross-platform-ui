@@ -1,4 +1,5 @@
 import 'package:es_ur_shortener/widgets/Hero_widget.dart';
+import 'package:es_ur_shortener/widgets/link_shortener.dart';
 import 'package:flutter/material.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -6,13 +7,16 @@ class HomeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      children: const [
-        SizedBox(
-          height: 600,
-          child: HeroContainerWidget(),
-        )
-      ],
+    return SingleChildScrollView(
+      child: Column(
+        children: const [
+          SizedBox(
+            height: 600,
+            child: HeroContainerWidget(),
+          ),
+          LinkShortenerContainer()
+        ],
+      ),
     );
   }
 }
