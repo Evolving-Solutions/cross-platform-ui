@@ -1,4 +1,5 @@
 import 'package:es_ur_shortener/widgets/Hero_widget.dart';
+import 'package:es_ur_shortener/widgets/homepage_tools.dart';
 import 'package:es_ur_shortener/widgets/link_shortener.dart';
 import 'package:flutter/material.dart';
 
@@ -11,10 +12,11 @@ class HomeScreen extends StatelessWidget {
       child: Column(
         children: const [
           SizedBox(
-            height: 600,
+            height: 400,
             child: HeroContainerWidget(),
           ),
-          LinkShortenerContainer()
+          LinkShortenerContainer(),
+          HomePageTools(),
         ],
       ),
     );
