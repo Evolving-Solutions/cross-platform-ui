@@ -22,18 +22,18 @@ AppBar topNavigationBar(BuildContext context, GlobalKey<ScaffoldState> key) =>
         width: 400,
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-          children: const [
+          children: [
             Text(
               'Features',
-              style: TextStyle(color: Colors.black),
+              style: TextStyle(color: Palette.primaryTextColor, fontSize: 15),
             ),
             Text(
               'Company',
-              style: TextStyle(color: Colors.black),
+              style: TextStyle(color: Palette.primaryTextColor, fontSize: 15),
             ),
             Text(
               'Docs',
-              style: TextStyle(color: Colors.black),
+              style: TextStyle(color: Palette.primaryTextColor, fontSize: 15),
             ),
           ],
         ),
