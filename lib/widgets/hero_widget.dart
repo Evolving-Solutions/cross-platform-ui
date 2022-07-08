@@ -50,7 +50,16 @@ class HeroContainerWidget extends StatelessWidget {
                       weight: FontWeight.w400,
                     ),
                   ),
-                  const ElevatedButton(onPressed: null, child: Text('Sign up for free'))
+                  ElevatedButton(
+                      onPressed: null,
+                      style: ButtonStyle(
+                        backgroundColor: MaterialStateProperty.all<Color>(
+                            Palette.primaryTeal),
+                      ),
+                      child: const Text(
+                        'Sign up for free',
+                        style: TextStyle(color: Colors.white),
+                      ))
                 ],
               ),
             ),

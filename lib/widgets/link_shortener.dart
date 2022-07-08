@@ -60,8 +60,16 @@ class LinkShortenerContainer extends StatelessWidget {
                   ),
                 ),
               ),
-              const ElevatedButton(
-                  onPressed: null, child: Text('Shorten URL'))
+              ElevatedButton(
+                  onPressed: null,
+                  style: ButtonStyle(
+                    backgroundColor: MaterialStateProperty.all<Color>(
+                        Palette.secondaryCoral),
+                  ),
+                  child: const Text(
+                    'Shorten URL',
+                    style: TextStyle(color: Colors.white),
+                  ))
             ],
           )
         ],
