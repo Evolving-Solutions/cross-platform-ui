@@ -1,5 +1,6 @@
 import 'package:es_ur_shortener/config/palette.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class LinkShortenerContainer extends StatelessWidget {
   const LinkShortenerContainer({Key? key}) : super(key: key);
@@ -19,25 +20,32 @@ class LinkShortenerContainer extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Container(
-                width: 500,
+                width: 600,
+                padding: const EdgeInsets.all(20),
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
                   crossAxisAlignment: CrossAxisAlignment.center,
-                  children: const [
+                  children: [
                     Text(
                       'Make your links shorter',
-                      style: TextStyle(
+                      style: GoogleFonts.raleway(
+                        textStyle: const TextStyle(
                         color: Colors.white,
-                        fontSize: 30,
+                        fontSize: 40,
+                        fontWeight: FontWeight.w700
                       ),
+                      )
                     ),
                     Text(
                       'Ac euismod vel sit maecenas id pellentesque eu sed consectetur. Malesuada adipiscing sagittis vel nulla nec.',
-                      style: TextStyle(
+                      style: GoogleFonts.raleway(
+                        textStyle: const TextStyle(
                         color: Colors.white,
-                        fontSize: 15,
+                        fontSize: 18,
+                        fontWeight: FontWeight.w400
                       ),
-                    )
+                      )
+                    ),
                   ],
                 ),
               )

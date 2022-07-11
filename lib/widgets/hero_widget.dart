@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:es_ur_shortener/config/palette.dart';
-import 'package:es_ur_shortener/widgets/custom_text.dart';
 import 'package:es_ur_shortener/config/assets.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class HeroContainerWidget extends StatelessWidget {
   const HeroContainerWidget({Key? key}) : super(key: key);
@@ -27,28 +27,43 @@ class HeroContainerWidget extends StatelessWidget {
                 children: [
                   Row(
                     children: [
-                      CustomText(
-                          text: 'Project K',
-                          size: 60,
-                          color: Palette.primaryCasal,
-                          weight: FontWeight.w800),
-                      CustomText(
-                          text: 'Tools',
-                          size: 60,
-                          color: Palette.secondaryCoral,
-                          weight: FontWeight.w800),
+                      Text(
+                        'Project K ',
+                        style: GoogleFonts.raleway(
+                          textStyle: TextStyle(
+                            fontSize: 60,
+                            color: Palette.primaryCasal,
+                            fontWeight: FontWeight.w800,
+                            letterSpacing: -2.5,
+                          ),
+                        ),
+                      ),
+                      Text(
+                        'Tools',
+                        style: GoogleFonts.raleway(
+                          textStyle: TextStyle(
+                            fontSize: 60,
+                            color: Palette.secondaryCoral,
+                            fontWeight: FontWeight.w800,
+                            letterSpacing: -2.5,
+                          ),
+                        ),
+                      ),
                     ],
                   ),
                   SizedBox(
                     width: 500,
                     height: 100,
-                    child: CustomText(
-                      text:
-                          'Varius facilisi mauris sed sit. Non sed et duis dui leo, vulputate id malesuada non. Cras aliquet purus dui laoreet diam sed lacus, fames.',
-                      size: 22,
-                      color: Palette.secondaryGranite,
-                      weight: FontWeight.w400,
-                    ),
+                    child: Text(
+                        'Varius facilisi mauris sed sit. Non sed et duis dui leo, vulputate id malesuada non. Cras aliquet purus dui laoreet diam sed lacus, fames.',
+                        style: GoogleFonts.inter(
+                          textStyle: TextStyle(
+                            fontSize: 22,
+                            color: Palette.secondaryGranite,
+                            fontWeight: FontWeight.w400, 
+                          ),
+                        ),
+                      ), 
                   ),
                   ElevatedButton(
                       onPressed: null,

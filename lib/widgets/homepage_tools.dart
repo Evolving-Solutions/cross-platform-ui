@@ -1,5 +1,7 @@
 import 'package:es_ur_shortener/config/palette.dart';
+import 'package:es_ur_shortener/widgets/custom_text.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class HomePageTools extends StatelessWidget {
   const HomePageTools({Key? key}) : super(key: key);
@@ -13,15 +15,35 @@ class HomePageTools extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
-          Container(
-              // width: 500,
-              child: const Text(
-            'Connecting all the tools you already use',
-            style: TextStyle(
-              fontWeight: FontWeight.w500,
-              fontSize: 30,
+          SizedBox(
+            width: MediaQuery.of(context).size.width,
+            height: 150,
+            child: Row(
+              crossAxisAlignment: CrossAxisAlignment.center,
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Text(
+                  'Connecting all the tools',
+                  style: GoogleFonts.inter(
+                    textStyle: TextStyle(
+                    fontWeight: FontWeight.w800,
+                    fontSize: 60,
+                    color: Palette.primaryCasal
+                  )
+                  )),
+                Text(
+                  ' you already use',
+                  style: GoogleFonts.inter(
+                    textStyle: TextStyle(
+                    fontWeight: FontWeight.w800,
+                    fontSize: 60,
+                    color: Palette.primaryTeal,
+                  ),
+                  )
+                ),
+              ],
             ),
-          )),
+          ),
           Expanded(
             child: GridView.count(
               primary: false,
