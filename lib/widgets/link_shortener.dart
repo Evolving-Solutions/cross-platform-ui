@@ -44,7 +44,8 @@ class LinkShortenerContainer extends StatelessWidget {
                         fontSize: 18,
                         fontWeight: FontWeight.w400
                       ),
-                      )
+                      ),
+                      textAlign: TextAlign.center,
                     ),
                   ],
                 ),
