@@ -12,8 +12,10 @@ class HomePageTools extends StatelessWidget {
       color: Palette.background,
       height: 1500,
       width: MediaQuery.of(context).size.width,
+      padding: const EdgeInsets.fromLTRB(100, 10, 100, 10),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.center,
+        mainAxisAlignment: MainAxisAlignment.start,
         children: [
           SizedBox(
             width: MediaQuery.of(context).size.width,
@@ -239,6 +241,51 @@ class HomePageTools extends StatelessWidget {
                 )
               ],
             ),
+          ),
+          Expanded(
+            child: Column(
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: [
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Text(
+                        'Enrich your ',
+                        style: GoogleFonts.inter(
+                          textStyle: TextStyle(
+                            fontWeight: FontWeight.w800,
+                            fontSize: 60,
+                            color: Palette.primaryCasal,
+                            letterSpacing: -2.5,
+                          ),
+                        ),
+                      ),
+                      Text(
+                        'online business process',
+                        style: GoogleFonts.inter(
+                          textStyle: TextStyle(
+                            fontWeight: FontWeight.w800,
+                            fontSize: 60,
+                            color: Palette.primaryTeal,
+                            letterSpacing: -2.5,
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
+                  Container(
+                    width: 760,
+                    child: Text(
+                      'Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo. Elit sunt amet fugiat veniam occaecat fugiat aliqua. ',
+                      style: GoogleFonts.raleway(
+                          textStyle: const TextStyle(
+                        fontWeight: FontWeight.w400,
+                        fontSize: 20,
+                      )),
+                      textAlign: TextAlign.center,
+                    ),
+                  )
+                ]),
           )
         ],
       ),
