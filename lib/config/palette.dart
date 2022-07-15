@@ -8,4 +8,5 @@ class Palette {
   static Color secondaryGranite = const Color.fromRGBO(94, 94, 94, 1);
   static Color background = const Color(0xFFE5E5E5);
   static Color primaryTextColor = const Color(0xFF6B7280);
+  static Color carol2 = const Color(0xFFFFb6AE);
 }
