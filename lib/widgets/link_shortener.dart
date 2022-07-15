@@ -13,7 +13,7 @@ class LinkShortenerContainer extends StatefulWidget {
 class _LinkShortenerContainerState extends State<LinkShortenerContainer> {
   final _formKey = GlobalKey<FormState>();
 
-  var isLoaded = false;
+  var isLoaded = true; // to be changed
   String? shortenedUrl;
 
   // shortenUrl
@@ -25,7 +25,7 @@ class _LinkShortenerContainerState extends State<LinkShortenerContainer> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 290,
+      height: isLoaded ? 400 : 290,
       color: Palette.primaryTeal,
       width: double.infinity,
       // padding: EdgeInsets.all(value),
@@ -74,7 +74,7 @@ class _LinkShortenerContainerState extends State<LinkShortenerContainer> {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Container(
-                      width: 630,
+                      width: 600,
                       height: 50,
                       color: Colors.white,
                       // padding: const EdgeInsets.all(20),
@@ -122,14 +122,45 @@ class _LinkShortenerContainerState extends State<LinkShortenerContainer> {
           Visibility(
             visible: isLoaded,
             replacement: const Center(child: CircularProgressIndicator()),
-            child: SizedBox(
-              height: 200,
-              child: ListView.builder(
-                itemCount: 2,
-                itemBuilder: (context, index) {
-                  return Container(child: const Text('Hello'));
-                },
-              ),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: [
+                Text('Here you go:',
+                    style: GoogleFonts.raleway(
+                      textStyle: const TextStyle(
+                          color: Colors.white,
+                          fontSize: 40,
+                          fontWeight: FontWeight.w700),
+                    )),
+                Container(
+                  height: 60,
+                  width: 750,
+                  padding: const EdgeInsets.fromLTRB(20, 10, 20, 10),
+                  margin: const EdgeInsets.only(top: 10),
+                  color: Palette.carol2,
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    children: [
+                      const Text(
+                        'https://evolveurl.co/api/8uhI0UKWA',
+                        style: TextStyle(
+                          color: Colors.white,
+                        ),
+                      ),
+                      ElevatedButton(
+                          onPressed: () {},
+                          style: ButtonStyle(
+                              backgroundColor: MaterialStateProperty.all<Color>(
+                                  Colors.white)),
+                          child: Text('Copy to clipboard',
+                              style: TextStyle(
+                                color: Palette.secondaryCoral,
+                              )))
+                    ],
+                  ),
+                ),
+              ],
             ),
           ),
         ],
