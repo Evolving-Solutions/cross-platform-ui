@@ -80,7 +80,7 @@ class HeroContainerWidget extends StatelessWidget {
             ),
           ),
           Expanded(
-            flex: 2,
+            flex: 1,
             child: Image.asset(Assets.hero))
         ],
       ),
